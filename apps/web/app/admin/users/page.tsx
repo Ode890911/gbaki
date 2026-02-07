@@ -182,7 +182,7 @@ export default function AdminUsersPage() {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600 dark:text-gray-400">Status</span>
                     <div className="flex items-center gap-2">
-                      {user.is_verified ? (
+                      {user.email_verified ? (
                         <UserCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
                       ) : (
                         <UserX className="w-4 h-4 text-gray-400" />

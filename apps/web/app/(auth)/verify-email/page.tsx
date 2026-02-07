@@ -69,7 +69,7 @@ export default function VerifyEmailPage() {
               email: response.user.email,
               first_name: response.user.first_name,
               last_name: response.user.last_name,
-              email_verified: response.user.is_verified,
+              email_verified: response.user.email_verified ?? false,
               is_active: true,
               created_at: new Date().toISOString(),
               marketing_consent: false,
