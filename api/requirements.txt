@@ -1,0 +1,73 @@
+# FastAPI & Server
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# Database & ORM
+sqlalchemy>=2.0.36
+alembic>=1.13.1
+psycopg2-binary>=2.9.10
+supabase==2.9.0
+postgrest==0.17.2
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+
+# Validation
+pydantic>=2.10.0
+pydantic-settings==2.6.1
+email-validator==2.2.0
+
+# Payments
+stripe==11.1.1
+
+# Communication
+resend==2.5.1
+twilio==9.3.7
+
+# AI Services
+openai==1.54.5
+anthropic==0.39.0
+
+# HTTP Client
+httpx==0.27.2
+requests==2.32.3
+
+# Background Tasks
+celery==5.4.0
+redis==5.2.0
+
+# File Processing
+Pillow==11.0.0
+PyPDF2==3.0.1
+python-docx==1.1.2
+python-magic==0.4.27
+
+# Utilities
+python-slugify==8.0.4
+python-dateutil==2.9.0
+pytz==2024.2
+
+# Monitoring & Logging
+sentry-sdk[fastapi]==1.40.0
+python-json-logger==2.0.7
+
+# Rate Limiting
+slowapi==0.1.9
+
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+
+# Code Quality
+black==24.10.0
+flake8==7.1.1
+mypy==1.13.0
+isort==5.13.2
+
+# Production
+gunicorn==23.0.0

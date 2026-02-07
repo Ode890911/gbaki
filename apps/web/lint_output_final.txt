@@ -1,0 +1,174 @@
+
+> gbaki-digital-solutions@0.1.0 lint
+> next lint
+
+
+./app/(auth)/forgot-password/page.tsx
+51:9  Warning: Unexpected console statement.  no-console
+54:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(auth)/login/page.tsx
+41:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(auth)/onboarding/page.tsx
+86:52  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+135:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+489:49  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/(auth)/register/page.tsx
+118:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(auth)/reset-password/page.tsx
+166:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(auth)/verify-email/page.tsx
+102:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(dashboard)/dashboard/documents/page.tsx
+113:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+125:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+164:61  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+389:11  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+474:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(dashboard)/dashboard/orders/page.tsx
+66:20  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+215:45  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/(dashboard)/dashboard/settings/page.tsx
+96:52  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+132:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+484:14  Warning: 'error' is defined but never used. Allowed unused caught errors must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/(dashboard)/dashboard/support/page.tsx
+36:58  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+199:20  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+471:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+505:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+653:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/about/page.tsx
+308:22  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/admin/analytics/page.tsx
+10:3  Warning: 'Calendar' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+18:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+19:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+25:6  Warning: React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+44:53  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+104:52  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+129:74  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+136:70  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+142:71  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/documents/page.tsx
+18:8  Warning: 'Link' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+21:46  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/layout.tsx
+13:3  Warning: 'Settings' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+21:10  Warning: 'Button' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/admin/orders/page.tsx
+9:3  Warning: 'Filter' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:3  Warning: 'MoreVertical' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+24:40  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+36:6  Warning: React Hook useEffect has a missing dependency: 'fetchOrders'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./app/admin/page.tsx
+51:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/support/page.tsx
+7:3  Warning: 'Search' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+8:3  Warning: 'Filter' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:3  Warning: 'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'AlertCircle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+21:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+32:6  Warning: React Hook useEffect has a missing dependency: 'fetchTickets'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./app/admin/users/page.tsx
+11:3  Warning: 'Mail' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'Package' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+13:3  Warning: 'MessageSquare' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+20:38  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+31:6  Warning: React Hook useEffect has a missing dependency: 'fetchUsers'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./app/api/contact/route.ts
+6:13  Warning: 'name' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+6:19  Warning: 'email' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+6:26  Warning: 'phone' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+6:33  Warning: 'subject' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+6:42  Warning: 'message' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/checkout/page.tsx
+11:3  Warning: 'Phone' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/contact/page.tsx
+36:14  Warning: 'error' is defined but never used. Allowed unused caught errors must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/resources/page.tsx
+9:3  Warning: 'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:3  Warning: 'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+14:3  Warning: 'Lightbulb' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+15:3  Warning: 'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+19:3  Warning: 'Zap' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+23:3  Warning: 'Award' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/services/ai-chatbot/page.tsx
+15:3  Warning: 'Smartphone' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/services/business-email/page.tsx
+14:3  Warning: 'Globe' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:3  Warning: 'Clock' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+20:3  Warning: 'Sparkles' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/services/business-phone/page.tsx
+14:3  Warning: 'Globe' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+15:3  Warning: 'Shield' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+16:3  Warning: 'Sparkles' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+52:147  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/services/ongoing-support/page.tsx
+7:3  Warning: 'Headphones' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+49:148  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/services/payment-processing/page.tsx
+19:3  Warning: 'Clock' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/services/website-development/page.tsx
+16:3  Warning: 'Sparkles' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:3  Warning: 'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+19:3  Warning: 'Star' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/dashboard/NotificationDropdown.tsx
+23:54  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/layout/Header.tsx
+58:12  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/auth.ts
+23:47  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/client.ts
+102:46  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/notifications.ts
+15:14  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/onboarding.ts
+28:84  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/support.ts
+52:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/api/users.ts
+59:37  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+npm error Lifecycle script `lint` failed with error:
+npm error code 1
+npm error path /Users/rodrigueadebigni/GBAKI DIGITAL /apps/web
+npm error workspace gbaki-digital-solutions@0.1.0
+npm error location /Users/rodrigueadebigni/GBAKI DIGITAL /apps/web
+npm error command failed
+npm error command sh -c next lint
