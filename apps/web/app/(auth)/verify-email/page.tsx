@@ -122,7 +122,7 @@ export default function VerifyEmailPage() {
   }, [state, countdown])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4 pt-20 lg:pt-24">
       <div className="w-full max-w-md">
         
         {/* Verifying State */}

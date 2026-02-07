@@ -175,7 +175,7 @@ export default function ResetPasswordPage() {
   // Show success state
   if (isSuccess) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4 pt-20 lg:pt-24">
         <div className="w-full max-w-md">
           <div className="bg-white dark:bg-gray-900 rounded-3xl border-2 border-green-200 dark:border-green-800 p-8 shadow-xl text-center">
             
@@ -204,7 +204,7 @@ export default function ResetPasswordPage() {
   // Show error if no token
   if (!token) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-red-50 to-rose-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-rose-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4 pt-20 lg:pt-24">
         <div className="w-full max-w-md">
           <div className="bg-white dark:bg-gray-900 rounded-3xl border-2 border-red-200 dark:border-red-800 p-8 shadow-xl text-center">
             
@@ -234,7 +234,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-950 dark:to-gray-900 flex items-center justify-center p-4 pt-20 lg:pt-24">
       <div className="w-full max-w-md">
         
         <div className="bg-white dark:bg-gray-900 rounded-3xl border-2 border-gray-200 dark:border-gray-800 p-8 shadow-xl">
