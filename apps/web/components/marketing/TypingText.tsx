@@ -34,7 +34,9 @@ export function TypingText({
       if (onComplete) {
         onComplete()
       }
+      return undefined
     }
+    return undefined
   }, [currentIndex, text, speed, delay, isComplete, onComplete])
 
   return (

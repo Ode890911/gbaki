@@ -18,7 +18,7 @@ export function useSupportTickets() {
 export function useSupportTicket(ticketId: string | null) {
   const { data, error, isLoading, mutate } = useSWR<SupportTicket>(
     ticketId ? `/support/${ticketId}` : null,
-    () => ticketId ? supportApi.getTicket(ticketId) : null
+    (url: string) => supportApi.getTicket(url.replace(/^\/support\//, ''))
   )
   
   return {

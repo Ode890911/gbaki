@@ -18,7 +18,7 @@ export function useDocuments() {
 export function useDocument(documentId: string | null) {
   const { data, error, isLoading, mutate } = useSWR<Document>(
     documentId ? `/documents/${documentId}` : null,
-    () => documentId ? documentsApi.getDocument(documentId) : null
+    (url: string) => documentsApi.getDocument(url.replace(/^\/documents\//, ''))
   )
   
   return {

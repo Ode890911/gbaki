@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { adminApi } from '@/lib/api/admin'
+import { adminApi, type AdminOverview } from '@/lib/api/admin'
 import {
   Users,
   Package,
@@ -17,28 +17,8 @@ import { Skeleton } from '@/components/ui/skeleton'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-interface OverviewStats {
-  overview: {
-    total_users: number
-    total_orders: number
-    total_revenue: number
-    active_orders: number
-    pending_documents: number
-    open_tickets: number
-  }
-  this_month: {
-    new_users: number
-    revenue: number
-  }
-  orders_by_status: Record<string, number>
-  recent_activity: {
-    orders_last_7_days: number
-    users_last_7_days: number
-  }
-}
-
 export default function AdminDashboardPage() {
-  const [stats, setStats] = useState<OverviewStats | null>(null)
+  const [stats, setStats] = useState<AdminOverview | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -130,21 +110,21 @@ export default function AdminDashboardPage() {
     },
     {
       title: 'Active Orders',
-      value: stats.overview.active_orders,
+      value: stats.overview.active_orders ?? 0,
       icon: Clock,
       color: 'from-orange-600 to-red-600',
       href: '/admin/orders?status=processing',
     },
     {
       title: 'Pending Documents',
-      value: stats.overview.pending_documents,
+      value: stats.overview.pending_documents ?? 0,
       icon: FileText,
       color: 'from-yellow-600 to-amber-600',
       href: '/admin/documents',
     },
     {
       title: 'Open Tickets',
-      value: stats.overview.open_tickets,
+      value: stats.overview.open_tickets ?? 0,
       icon: MessageSquare,
       color: 'from-indigo-600 to-purple-600',
       href: '/admin/support',
@@ -226,7 +206,7 @@ export default function AdminDashboardPage() {
             Orders by Status
           </h2>
           <div className="space-y-3">
-            {Object.entries(stats.orders_by_status).map(([status, count]) => (
+            {Object.entries(stats.orders_by_status ?? {}).map(([status, count]) => (
               <div key={status} className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-purple-600" />
@@ -259,7 +239,7 @@ export default function AdminDashboardPage() {
                 </span>
               </div>
               <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                {stats.overview.pending_documents} pending
+                {stats.overview.pending_documents ?? 0} pending
               </span>
             </Link>
 
@@ -274,7 +254,7 @@ export default function AdminDashboardPage() {
                 </span>
               </div>
               <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                {stats.overview.open_tickets} open
+                {stats.overview.open_tickets ?? 0} open
               </span>
             </Link>
 
@@ -289,7 +269,7 @@ export default function AdminDashboardPage() {
                 </span>
               </div>
               <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                {stats.overview.active_orders} active
+                {stats.overview.active_orders ?? 0} active
               </span>
             </Link>
           </div>

@@ -6,6 +6,9 @@ export interface AdminOverview {
     total_revenue: number
     total_orders: number
     total_users: number
+    active_orders?: number
+    pending_documents?: number
+    open_tickets?: number
   }
   this_month: {
     revenue: number
@@ -16,6 +19,7 @@ export interface AdminOverview {
     orders_last_7_days: number
     users_last_7_days: number
   }
+  orders_by_status?: Record<string, number>
 }
 
 export interface RevenueStats {

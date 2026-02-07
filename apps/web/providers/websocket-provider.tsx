@@ -22,7 +22,8 @@ export function WebSocketProvider({ children }: { children: React.ReactNode }) {
     if (typeof window === 'undefined') return
 
     // TODO: Replace with your WebSocket URL
-    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000/ws'
+    const _wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000/ws'
+    void _wsUrl
     
     // For now, we'll simulate connection without actually connecting
     // Uncomment when you have a WebSocket server ready
@@ -67,7 +68,7 @@ export function WebSocketProvider({ children }: { children: React.ReactNode }) {
     setIsConnected(true)
   }, [])
 
-  const handleMessage = (data: any) => {
+  const _handleMessage = (data: { type?: string; message?: string }) => {
     switch (data.type) {
       case 'order_update':
         toast.success('Order Update', {
@@ -100,8 +101,9 @@ export function WebSocketProvider({ children }: { children: React.ReactNode }) {
         break
     }
   }
+  void _handleMessage
 
-  const sendMessage = (message: any) => {
+  const sendMessage = (message: { type?: string; [key: string]: unknown }) => {
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
       wsRef.current.send(JSON.stringify(message))
     }

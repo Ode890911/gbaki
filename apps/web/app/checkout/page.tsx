@@ -8,7 +8,6 @@ import {
   Building2,
   User,
   Mail,
-  Phone,
   MapPin,
   CheckCircle,
   ArrowRight,

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { adminApi } from '@/lib/api/admin'
+import type { Document } from '@/lib/api/documents'
 import {
   FileText,
   CheckCircle,
@@ -15,10 +16,14 @@ import {
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { format } from 'date-fns'
-import Link from 'next/link'
+
+type AdminDocument = Document & {
+  user?: { name?: string; email?: string }
+  order?: { order_number?: string }
+}
 
 export default function AdminDocumentsPage() {
-  const [documents, setDocuments] = useState<any[]>([])
+  const [documents, setDocuments] = useState<AdminDocument[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -92,7 +97,7 @@ export default function AdminDocumentsPage() {
                         {doc.name}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        {doc.document_type} • {formatFileSize(doc.file_size)}
+                        {doc.document_type} • {formatFileSize(doc.file_size ?? 0)}
                       </p>
                     </div>
                   </div>

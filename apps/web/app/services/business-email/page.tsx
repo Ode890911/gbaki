@@ -11,13 +11,10 @@ import {
   Users,
   Lock,
   Zap,
-  Globe,
   HardDrive,
   FileText,
-  Clock,
   Star,
   TrendingUp,
-  Sparkles,
   HelpCircle
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'

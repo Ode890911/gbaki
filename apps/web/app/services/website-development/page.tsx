@@ -13,10 +13,7 @@ import {
   Lock,
   Palette,
   Code,
-  Sparkles,
-  TrendingUp,
   Users,
-  Star,
   Layout,
   Image as ImageIcon,
   HelpCircle

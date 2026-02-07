@@ -12,7 +12,6 @@ import {
   Shield,
   Languages,
   BarChart,
-  Smartphone,
   HelpCircle,
   Calendar
 } from 'lucide-react'

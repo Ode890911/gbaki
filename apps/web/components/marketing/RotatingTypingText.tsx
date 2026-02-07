@@ -26,7 +26,7 @@ export function RotatingTypingText({
   React.useEffect(() => {
     // Safety check
     if (!words || words.length === 0) {
-      return
+      return undefined
     }
 
     if (isPaused) {
@@ -41,7 +41,7 @@ export function RotatingTypingText({
     
     // Safety check for current word
     if (!currentWord) {
-      return
+      return undefined
     }
     
     if (!isDeleting) {
@@ -55,6 +55,7 @@ export function RotatingTypingText({
       } else {
         // Word complete, pause then start deleting
         setIsPaused(true)
+        return undefined
       }
     } else {
       // Deleting mode
@@ -70,6 +71,7 @@ export function RotatingTypingText({
         setCurrentWordIndex(prev => (prev + 1) % words.length)
         setCurrentCharIndex(0)
         setDisplayedText('')
+        return undefined
       }
     }
   }, [currentCharIndex, currentWordIndex, isDeleting, isPaused, words, speed, delay, pauseBetweenWords])

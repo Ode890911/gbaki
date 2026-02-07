@@ -10,7 +10,6 @@ import {
   FileText,
   MessageSquare,
   Users,
-  Settings,
   LogOut,
   Menu,
   X,
@@ -18,7 +17,6 @@ import {
   Bell,
   Search
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 export default function AdminLayout({
   children,

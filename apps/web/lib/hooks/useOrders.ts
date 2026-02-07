@@ -18,7 +18,7 @@ export function useOrders() {
 export function useOrder(orderId: string | null) {
   const { data, error, isLoading, mutate } = useSWR<Order>(
     orderId ? `/orders/${orderId}` : null,
-    () => orderId ? ordersApi.getOrder(orderId) : null
+    (url: string) => ordersApi.getOrder(url.replace(/^\/orders\//, ''))
   )
   
   return {

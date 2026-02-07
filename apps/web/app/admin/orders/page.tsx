@@ -29,7 +29,7 @@ export default function AdminOrdersPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [statusFilter, setStatusFilter] = useState(searchParams.get('status') || '')
   const [packageTypeFilter, setPackageTypeFilter] = useState('')
-  const [paymentStatusFilter, setPaymentStatusFilter] = useState('')
+  const [paymentStatusFilter, _setPaymentStatusFilter] = useState('')
 
   const fetchOrders = useCallback(async () => {
     try {

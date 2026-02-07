@@ -65,9 +65,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const userData = await usersApi.getCurrentUser()
         setUser(userData)
       }
-
-      // Return response for login page to handle redirect
-      return response
     } catch (error) {
       console.error('Login error in provider:', error)
       throw error

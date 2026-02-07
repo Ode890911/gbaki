@@ -17,6 +17,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+// Avoid static prerender: lucide-react optimizePackageImports can break icon-in-map during SSR
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Dedicated Support - Your Success Partner, Always Available',
   description: 'Personal account manager and ongoing support to help you navigate every challenge. Priority support, compliance reminders, and growth consultations.',
@@ -51,22 +54,30 @@ export default function OngoingSupportPage() {
 
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {[
-                  { icon: Users, text: 'Dedicated account manager' },
-                  { icon: Phone, text: 'Priority phone support' },
-                  { icon: Bell, text: 'Compliance reminders' },
-                  { icon: TrendingUp, text: 'Growth consultations' },
-                ].map((benefit, i) => {
-                  const Icon = benefit.icon
-                  return (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <span className="font-semibold">{benefit.text}</span>
-                    </div>
-                  )
-                })}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <span className="font-semibold">Dedicated account manager</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <span className="font-semibold">Priority phone support</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <Bell className="w-5 h-5" />
+                  </div>
+                  <span className="font-semibold">Compliance reminders</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <span className="font-semibold">Growth consultations</span>
+                </div>
               </div>
 
               {/* CTA */}
@@ -140,51 +151,15 @@ export default function OngoingSupportPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: Users,
-                title: 'Dedicated Account Manager',
-                description: 'Your personal point of contact who knows your business inside and out. Available via email, phone, and scheduled calls.',
-              },
-              {
-                icon: Mail,
-                title: 'Priority Email Support',
-                description: 'Fast response times (typically under 4 hours) for all your questions and concerns. Priority queue for urgent issues.',
-              },
-              {
-                icon: Phone,
-                title: 'Phone Consultation Access',
-                description: 'Schedule phone calls with your account manager for complex questions, strategy discussions, or troubleshooting.',
-              },
-              {
-                icon: Bell,
-                title: 'Compliance Reminders',
-                description: 'Never miss a deadline. We send reminders for annual reports, tax deadlines, license renewals, and more.',
-              },
-              {
-                icon: FileText,
-                title: 'Annual Report Filing',
-                description: 'We help you file annual reports and maintain good standing with your state. Avoid penalties and maintain compliance.',
-              },
-              {
-                icon: Calendar,
-                title: 'Tax Deadline Notifications',
-                description: 'Get timely reminders for federal and state tax deadlines. We help you stay organized and avoid late fees.',
-              },
-              {
-                icon: TrendingUp,
-                title: 'Growth Strategy Consultations',
-                description: 'Regular check-ins to discuss your business growth, expansion opportunities, and strategic planning.',
-              },
-              {
-                icon: Users,
-                title: 'Community Access',
-                description: 'Join our community of entrepreneurs. Network, share experiences, and learn from others on the same journey.',
-              },
-              {
-                icon: Clock,
-                title: 'Ongoing Support',
-                description: 'Support doesn&apos;t end after launch. We&apos;re here for the long haul, helping you navigate every stage of growth.',
-              },
+              { icon: Users, title: 'Dedicated Account Manager', description: 'Your personal point of contact who knows your business inside and out. Available via email, phone, and scheduled calls.' },
+              { icon: Mail, title: 'Priority Email Support', description: 'Fast response times (typically under 4 hours) for all your questions and concerns. Priority queue for urgent issues.' },
+              { icon: Phone, title: 'Phone Consultation Access', description: 'Schedule phone calls with your account manager for complex questions, strategy discussions, or troubleshooting.' },
+              { icon: Bell, title: 'Compliance Reminders', description: 'Never miss a deadline. We send reminders for annual reports, tax deadlines, license renewals, and more.' },
+              { icon: FileText, title: 'Annual Report Filing', description: 'We help you file annual reports and maintain good standing with your state. Avoid penalties and maintain compliance.' },
+              { icon: Calendar, title: 'Tax Deadline Notifications', description: 'Get timely reminders for federal and state tax deadlines. We help you stay organized and avoid late fees.' },
+              { icon: TrendingUp, title: 'Growth Strategy Consultations', description: 'Regular check-ins to discuss your business growth, expansion opportunities, and strategic planning.' },
+              { icon: Users, title: 'Community Access', description: 'Join our community of entrepreneurs. Network, share experiences, and learn from others on the same journey.' },
+              { icon: Clock, title: 'Ongoing Support', description: 'Support doesn\'t end after launch. We\'re here for the long haul, helping you navigate every stage of growth.' },
             ].map((feature, i) => {
               const Icon = feature.icon
               return (

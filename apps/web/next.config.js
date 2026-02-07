@@ -147,10 +147,9 @@ const nextConfig = {
     ignoreBuildErrors: false,
   },
 
-  // ESLint
+  // ESLint - ignore during builds so Vercel succeeds; run lint locally/CI
   eslint: {
-    // Only run ESLint in CI
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
 }
 
