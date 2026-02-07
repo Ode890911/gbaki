@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   Building2,
@@ -65,12 +66,12 @@ const footerLinks = {
 }
 
 const countries = [
-  { name: 'Nigeria', flag: '🇳🇬' },
-  { name: 'Ethiopia', flag: '🇪🇹' },
-  { name: 'Ghana', flag: '🇬🇭' },
-  { name: 'Kenya', flag: '🇰🇪' },
-  { name: 'South Africa', flag: '🇿🇦' },
-  { name: 'Cameroon', flag: '🇨🇲' },
+  { name: 'Nigeria', code: 'ng' },
+  { name: 'Ethiopia', code: 'et' },
+  { name: 'Ghana', code: 'gh' },
+  { name: 'Kenya', code: 'ke' },
+  { name: 'South Africa', code: 'za' },
+  { name: 'Cameroon', code: 'cm' },
 ]
 
 export function Footer() {
@@ -286,7 +287,14 @@ export function Footer() {
                   className="group relative px-4 py-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-all cursor-default"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">{country.flag}</span>
+                    <Image
+                      src={`https://flagcdn.com/w80/${country.code}.png`}
+                      alt=""
+                      width={28}
+                      height={21}
+                      className="w-7 h-[21px] rounded object-cover flex-shrink-0"
+                      unoptimized
+                    />
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {country.name}
                     </span>
